@@ -1,6 +1,12 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    if len(sentence)==0:
-        return (0,None)
-    else:
-        return (len(sentence),sentence[0])
+    c = ()
+    result = []
+    if sentence:
+        result.append(len(sentence))
+        result.append(sentence[0])
+    elif not sentence:
+        result.append(0)
+        result.append(None)
+    c = tuple(result)
+    return c
